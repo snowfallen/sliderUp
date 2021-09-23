@@ -31,6 +31,7 @@ body {
 }
 
 .sidebar > div {
+		padding: 3px;
 		height: 100%;
 		width: 100%;
 		display: -webkit-box;
@@ -50,9 +51,15 @@ body {
 }
 
 .sidebar h1 {
-		font-size: 40px;
+		font-size: calc(10px + 30 * (100vw / 1980));
 		margin-bottom: 10px;
 		margin-top: -30px;
+		text-align: center;
+}
+
+.sidebar p {
+		font-size: calc(10px + 6 * (100vw / 1200));
+		text-align: center;
 }
 
 .main-slide {
@@ -111,4 +118,10 @@ button:focus {
 		        transform: translateY(-100%);
 		border-top-right-radius: 5px;
 		border-bottom-right-radius: 5px;
+}
+
+@media (max-width: 768px) {
+		.container .controls button {
+				top: 70%;
+		}
 }
